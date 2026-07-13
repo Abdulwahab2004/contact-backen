@@ -14,7 +14,9 @@ mongoose
   .connect("mongodb+srv://wahabnadeemwork_db_user:Sikander2004,@cluster0.yystx7n.mongodb.net/")
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
-
+app.get("/", (req, res) => {
+  res.send("Contact API is running successfully!");
+});
 app.use("/api/contact", require("./routes/ContactRoutes"));
 
 const PORT = process.env.PORT || 4050;
