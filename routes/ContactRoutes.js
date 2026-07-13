@@ -5,6 +5,11 @@ const Contact = require("../models/Contact");
 
 router.post("/", async (req, res) => {
   try {
+     console.log("Received Data:");
+    console.log(req.body);
+
+    
+
     const { name, email, website, message } = req.body;
 
     if (!name || !email || !website || !message) {
