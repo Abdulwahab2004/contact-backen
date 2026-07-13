@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect("mongodb+srv://wahabnadeemwork_db_user:Sikander2004,@cluster0.yystx7n.mongodb.net/")
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
